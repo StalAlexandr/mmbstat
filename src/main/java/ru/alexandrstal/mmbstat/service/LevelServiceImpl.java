@@ -15,7 +15,7 @@ import javax.transaction.Transactional;
 @Transactional
 public class LevelServiceImpl implements LevelService {
 
-    @Autowired
+  //  @Autowired
     private LevelDao dao;
 
     @Override

@@ -6,7 +6,7 @@ import ru.alexandrstal.mmbstat.model.TeamLevelDismiss;
 /**
  * Created by astal on 04.11.17.
  */
-@Repository("teamleveldismissDao")
+//@Repository("teamleveldismissDao")
 public class TeamLevelDismissDaoImpl extends AbstractDao implements TeamLevelDismissDao {
     @Override
     public void save(TeamLevelDismiss teamLevelDismiss) {

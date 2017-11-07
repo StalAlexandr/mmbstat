@@ -16,7 +16,7 @@ import javax.transaction.Transactional;
 public class RaidServiceImpl implements RaidService {
 
 
-    @Autowired
+ //   @Autowired
     private RaidDao dao;
 
     @Override

@@ -11,7 +11,7 @@ import javax.transaction.Transactional;
 @Transactional
 public class DistanceServiceImpl implements DistanceService{
 
-    @Autowired
+  //  @Autowired
     private DistanceDao dao;
 
     @Override

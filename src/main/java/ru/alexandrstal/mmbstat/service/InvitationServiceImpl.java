@@ -14,7 +14,7 @@ import javax.transaction.Transactional;
 @Transactional
 public class InvitationServiceImpl implements InvitationService {
 
-    @Autowired
+ //   @Autowired
     private InvitationDao dao;
 
     @Override

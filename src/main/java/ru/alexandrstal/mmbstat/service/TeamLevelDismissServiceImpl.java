@@ -15,7 +15,7 @@ import javax.transaction.Transactional;
 @Transactional
 public class TeamLevelDismissServiceImpl implements TeamLevelDismissService {
 
-    @Autowired
+ //   @Autowired
     private TeamLevelDismissDao dao;
 
     @Override

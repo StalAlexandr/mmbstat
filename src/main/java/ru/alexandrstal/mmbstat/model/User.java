@@ -9,7 +9,7 @@ import javax.persistence.Temporal;
 import java.util.Calendar;
 import java.util.Date;
 
-@Entity(name = "Users")
+//@Entity(name = "Users")
 public class User {
 
     @JsonProperty("user_id")
@@ -33,7 +33,7 @@ public class User {
     @Column(name = "user_registerdt")
     private Date userRegisterdt = Calendar.getInstance().getTime();
 
-    /*
+
     @JsonProperty("user_minraidid")
     private Integer userMinRaidId;
 
@@ -48,7 +48,10 @@ public class User {
 
     @JsonProperty("user_noinvitation")
     private Integer userNoinvitation;
-*/
+
+    @JsonProperty("user_sex")
+    private Integer user_sex;
+
     public Integer getUserId() {
         return userId;
     }
@@ -90,7 +93,7 @@ public class User {
         this.userCity = userCity;
     }
 
-    /*
+
     public Integer getUserMinRaidId() {
         return userMinRaidId;
     }
@@ -130,5 +133,12 @@ public class User {
     public void setUserNoinvitation(Integer userNoinvitation) {
         this.userNoinvitation = userNoinvitation;
     }
-*/
+
+    public Integer getUser_sex() {
+        return user_sex;
+    }
+
+    public void setUser_sex(Integer user_sex) {
+        this.user_sex = user_sex;
+    }
 }

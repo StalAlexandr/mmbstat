@@ -15,7 +15,7 @@ import javax.transaction.Transactional;
 @Transactional
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+ //   @Autowired
     private UserDao dao;
 
     @Override

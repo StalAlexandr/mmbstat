@@ -2,20 +2,38 @@ package ru.alexandrstal.mmbstat.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import java.util.Calendar;
+import java.util.Date;
+
+@Entity(name = "Users")
 public class User {
 
     @JsonProperty("user_id")
+    @Id
+    @Column(name = "user_id")
     private Integer userId;
 
     @JsonProperty("user_name")
+    @Column(name = "user_name")
     private String userName;
 
     @JsonProperty("user_birthyear")
+    @Column(name = "user_birthyear")
     private Integer userBirthYear;
 
     @JsonProperty("user_city")
+    @Column(name = "user_city")
     private String userCity;
 
+    @JsonProperty("user_registerdt")
+    @Column(name = "user_registerdt")
+    private Date userRegisterdt = Calendar.getInstance().getTime();
+
+    /*
     @JsonProperty("user_minraidid")
     private Integer userMinRaidId;
 
@@ -30,7 +48,7 @@ public class User {
 
     @JsonProperty("user_noinvitation")
     private Integer userNoinvitation;
-
+*/
     public Integer getUserId() {
         return userId;
     }
@@ -38,6 +56,15 @@ public class User {
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
+
+    public Date getUserRegisterdt() {
+        return userRegisterdt;
+    }
+
+    public void setUserRegisterdt(Date userRegisterdt) {
+        this.userRegisterdt = userRegisterdt;
+    }
+
 
     public String getUserName() {
         return userName;
@@ -63,6 +90,7 @@ public class User {
         this.userCity = userCity;
     }
 
+    /*
     public Integer getUserMinRaidId() {
         return userMinRaidId;
     }
@@ -102,4 +130,5 @@ public class User {
     public void setUserNoinvitation(Integer userNoinvitation) {
         this.userNoinvitation = userNoinvitation;
     }
+*/
 }

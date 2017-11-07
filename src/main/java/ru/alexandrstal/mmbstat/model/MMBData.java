@@ -2,9 +2,12 @@ package ru.alexandrstal.mmbstat.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Id;
+
 public class MMBData {
 
     @JsonProperty("Distances")
+    @Id
     private Distance[] distances;
 
     @JsonProperty("Raids")

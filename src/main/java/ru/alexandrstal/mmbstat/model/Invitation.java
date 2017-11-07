@@ -2,25 +2,34 @@ package ru.alexandrstal.mmbstat.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
-@Entity
+@Entity(name="Invitations")
 public class Invitation {
 
+
     @JsonProperty("invitation_id")
+    @Id
+    @Column(name = "invitation_id")
     private Integer invitationId;
 
     @JsonProperty("invitation_begindt")
+    @Column(name = "invitation_begindt")
     private Date invitationBegindt;
 
     @JsonProperty("invitation_enddt")
+    @Column(name = "invitation_enddt")
     private Date invitation_enddt;
 
     @JsonProperty("user_id")
+    @Column(name = "user_id")
     private Integer userId;
 
     @JsonProperty("invitationdelivery_type")
+    @Column(name = "invitationdelivery_type")
     private Integer invitationdeliveryType;
 
     public Integer getInvitationId() {

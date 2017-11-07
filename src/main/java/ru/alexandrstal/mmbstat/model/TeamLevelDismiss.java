@@ -4,22 +4,29 @@ package ru.alexandrstal.mmbstat.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
-@Entity
+@Entity(name="TeamLevelDismises")
 public class TeamLevelDismiss {
 
     @JsonProperty("teamleveldismiss_id")
+    @Id
+    @Column(name = "teamleveldismiss_id")
     private Integer teamLevelDismissId;
 
     @JsonProperty("levelpoint_id")
+    @Column(name = "levelpoint_id")
     private Integer levelPointId;
 
     @JsonProperty("teamleveldismiss_date")
+    @Column(name = "teamleveldismiss_date")
     private Date teamLevelDismissDate;
 
     @JsonProperty("teamuser_id")
+    @Column(name = "teamuser_id")
     private Integer teamuserId;
 
     public Integer getTeamLevelDismissId() {

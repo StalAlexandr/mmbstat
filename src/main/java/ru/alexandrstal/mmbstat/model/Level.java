@@ -4,37 +4,49 @@ package ru.alexandrstal.mmbstat.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
-@Entity
+@Entity(name="Levels")
 public class Level {
 
     @JsonProperty("levelpoint_id")
+    @Id
+    @Column(name = "levelpoint_id")
     private Integer levelpointId;
 
     @JsonProperty("distance_id")
+    @Column(name = "distance_id")
     private Integer distanceId;
 
     @JsonProperty("levelpoint_name")
+    @Column(name = "levelpoint_name")
     private String levelpointName;
 
     @JsonProperty("levelpoint_order")
+    @Column(name = "levelpoint_order")
     private Integer levelpointOrder;
 
     @JsonProperty("pointtype_id")
+    @Column(name = "pointtype_id")
     private Integer pointtypeId;
 
     @JsonProperty("levelpoint_penalty")
+    @Column(name = "levelpoint_penalty")
     private Integer levelpointPenalty;
 
     @JsonProperty("levelpoint_mindatetime")
+    @Column(name = "levelpoint_mindatetime")
     private Date levelpointMinDatetime;
 
     @JsonProperty("levelpoint_maxdatetime")
+    @Column(name = "levelpoint_maxdatetime")
     private Date levelpointMaxDatetime;
 
     @JsonProperty("scanpoint_id")
+    @Column(name = "scanpoint_id")
     private Integer scanpointId;
 
     public Integer getLevelpointId() {
